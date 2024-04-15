@@ -5,7 +5,7 @@ class User:
     Handles the buying and selling actions in manual mode.
     The user can specify which stocks to buy/sell.
     '''
-    def __init__(self, api_key: str, secret_key: str, paper: bool) -> None:
+    def __init__(self, api_key: str, secret_key: str, paper: bool=True) -> None:
         self.trading_client = TradingClient(api_key, secret_key, paper)
         self.account = self.trading_client.get_account()
     
