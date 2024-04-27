@@ -5,6 +5,7 @@ from Action import Action
 from User import User
 from abc import ABC, abstractmethod
 
+
 class Buy(Action, ABC):
     def __init__(self, user: User, symbol: str, qty: float, time_in_force: TimeInForce):
         self.user = user
